@@ -1,6 +1,5 @@
 {
-  "pages": [
-    {
+  "pages": [{
       "path": "pages/index/index"
     },
     {
@@ -22,8 +21,7 @@
     "backgroundColor": "#F7F7FA",
     "color": "#707070",
     "selectedColor": "#ffad00",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "/static/tabbar/home.png",
@@ -46,7 +44,7 @@
   "globalStyle": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "优券了个券",
-    "navigationBarBackgroundColor": "#007AFF",
+    "navigationBarBackgroundColor": "#ffad00",
     "backgroundColor": "#FFFFFF"
   },
   "uniIdRouter": {}

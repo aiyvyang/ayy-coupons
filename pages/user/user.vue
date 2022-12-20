@@ -22,13 +22,13 @@
           <image class="right" src="/static/right_h.png"></image>
         </button>
       </view>
-      <view class="item">
-        <image class="icon" src="/static/user_hezuo.png"></image>
-        <button class="content share" @tap="chouqian">
-          <view>抽签小程序</view>
-          <image class="right" src="/static/right_h.png"></image>
-        </button>
-      </view>
+      <!--<view class="item">-->
+      <!--  <image class="icon" src="/static/user_hezuo.png"></image>-->
+      <!--  <button class="content share" @tap="chouqian">-->
+      <!--    <view>抽签小程序</view>-->
+      <!--    <image class="right" src="/static/right_h.png"></image>-->
+      <!--  </button>-->
+      <!--</view>-->
     </view>
     <view class="version">
       v1.0.0
