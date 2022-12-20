@@ -6,7 +6,7 @@
         <view class="top">
           <view class="left">
             <view class="content">
-              <image :src="v.icon" class="icon" mode="widthFix" />
+              <image :src="v.icon" class="icon" mode="widthFix"/>
               <view class="name">{{ v.name }}</view>
             </view>
             <view class="text" v-if="v.type == 1">天天可领</view>
@@ -15,7 +15,7 @@
           <view class="right">免费领取</view>
         </view>
         <view class="bottom">
-          <image :src="v.bannerPic" mode="widthFix" />
+          <image :src="v.bannerPic" mode="widthFix"/>
         </view>
       </view>
     </view>
@@ -35,14 +35,15 @@ export default {
   data() {
     return {
       current: 0,
-      tabs: [{
-        "_id": {
-          "$oid": "60155f5421a3040001350f96"
+      tabs: [
+        {
+          "_id": {
+            "$oid": "60155f5421a3040001350f96"
+          },
+          "icon": "/static/all.png",
+          "tabId": 0,
+          "text": "全部"
         },
-        "icon": "/static/all.png",
-        "tabId": 0,
-        "text": "全部"
-      },
         {
           "_id": {
             "$oid": "60155f5421a3040001350f98"
@@ -78,66 +79,70 @@ export default {
 
       ],
       couponList: [],
-      coupons: [{
-        "_id": {
-          "$oid": "5fe62b3eee98e30001cb59d0"
+      coupons: [
+        {
+          "_id": {
+            "$oid": "5fe62b3eee98e30001cb59d0"
+          },
+          "bannerPic": "/static/coupon/meituan_banner.png",
+          "icon": "/static/coupon/meituan.png",
+          "minapp": {
+            "appid": "wx2c348cf579062e56",
+            "path": "outer_packages/r2xinvite/coupon/coupon?inviteCode=NnOIp-QOs8SiYF1dcSlL5r8phPrCf6qkH7evMyjIoup2NXxNCLYcBbd3bqpv2X2Ih2QG-YrNOqO284kcln6BCYfckBu6cqLQD0VXZQF63FEn3rMY-PBvvf0D-SJXXThXvKf5O9N_120IcigRbQcEoVdYLkp82LGcg78wAMUTp60"
+          },
+          "name": "美团外卖红包",
+          "sort": 99,
+          "tabId": 2,
+          "type": 1,
+          "url": "https://s.click.ele.me/kJqTROu"
         },
-        "bannerPic": "/static/coupon/meituan_banner.png",
-        "icon": "/static/coupon/meituan.png",
-        "minapp": {
-          "appid": "wx2c348cf579062e56",
-          "path": "outer_packages/r2xinvite/coupon/coupon?inviteCode=NnOIp-QOs8SiYF1dcSlL5r8phPrCf6qkH7evMyjIoup2NXxNCLYcBbd3bqpv2X2IWTcwWnu8FWalYrL6rB4nEogky0MwdrTa0OeltYyn2sIyfrnrBnlaeNLdKMNZBOGb82G3uByW5JEsf_XoD-_TdTyyKE2IlC762vKlLkkjfog"
+        {
+          "_id": {
+            "$oid": "5fe62b3eee98e30001cb59cf"
+          },
+          "bannerPic": "/static/coupon/ele_banner.png",
+          "icon": "/static/coupon/ele.png",
+          "minapp": {
+            "appid": "wxece3a9a4c82f58c9",
+            "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/kJqTROu"
+          },
+          "name": "饿了么红包",
+          "sort": 100,
+          "tabId": 1,
+          "type": 1,
+          "url": "https://s.click.ele.me/kJqTROu"
         },
-        "name": "美团外卖红包",
-        "sort": 99,
-        "tabId": 2,
-        "type": 1,
-        "url": "http://dpurl.cn/qWQQFhJ"
-      }, {
-        "_id": {
-          "$oid": "5fe62b3eee98e30001cb59cf"
+        {
+          "_id": {
+            "$oid": "5fe62b3eee98e30001cb59d1"
+          },
+          "bannerPic": "/static/coupon/sanzhisongshu.png",
+          "icon": "/static/coupon/jd.png",
+          "minapp": {
+            "appid": "wx91d27dbf599dff74",
+            "path": "pages/union/proxy/proxy?spreadUrl=https%3a%2f%2funion-click.jd.com%2fjdc%3fe%3d%26p%3dAyIGZRhZFAIRAF0SXxMyEgZUGloTChEFUxlfJUZNXwtEa0xHV0YXEEULWUpYA0wPSh1JUkpJBUkcSkIBR0RMR05aW1kBUQ4SBlQaWhMKEQVTGV8CQh5zLGs%252BYnF1RiNiI3V2W2wWYy5ye3BdNRk7XQprZQ9nH2FnamE3Uh1edVoOPH8oYQBlX1x7OUxhV2Q3ZCJuYWVEImInd3VLbApjK35JRk4iWj1eeWpwD04MYl16Vyx4IFF0a3sGYDsBAGcTV25rbkJzTAATU3ZhckMFTwFLVnQPPWYCdQ4eN1QrWBQCEgNWHlwSBiI3VRxrQ2wSBlQaWhUGEQBcK1olAhUHVhpcFwEVAVAaUiUFEg5lQA57BxdSVB1YQVIXVVdOCSUyIgRlK2sVASIEZVk1FwdADlwaDhcKEg9QHg4WUUIGBh9SEgAWUlIbWEILQARlGVoUBhs%253D"
+          },
+          "name": "过幸福年还得京东超市",
+          "sort": 98,
+          "tabId": 3,
+          "type": 0,
+          "url": "https://u.jd.com/od4S66v"
         },
-        "bannerPic": "/static/coupon/ele_banner.png",
-        "icon": "/static/coupon/ele.png",
-        "minapp": {
-          "appid": "wxece3a9a4c82f58c9",
-          "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/FXCJbru"
-        },
-        "name": "饿了么红包",
-        "sort": 100,
-        "tabId": 1,
-        "type": 1,
-        "url": "https://s.click.ele.me/frZOjvu"
-      }, {
-        "_id": {
-          "$oid": "5fe62b3eee98e30001cb59d1"
-        },
-        "bannerPic": "/static/coupon/sanzhisongshu.png",
-        "icon": "/static/coupon/jd.png",
-        "minapp": {
-          "appid": "wx91d27dbf599dff74",
-          "path": "pages/union/proxy/proxy?spreadUrl=https%3a%2f%2funion-click.jd.com%2fjdc%3fe%3d%26p%3dAyIGZRhZFAIRAF0SXxMyEgZUGloTChEFUxlfJUZNXwtEa0xHV0YXEEULWUpYA0wPSh1JUkpJBUkcSkIBR0RMR05aW1kBUQ4SBlQaWhMKEQVTGV8CQh5zLGs%252BYnF1RiNiI3V2W2wWYy5ye3BdNRk7XQprZQ9nH2FnamE3Uh1edVoOPH8oYQBlX1x7OUxhV2Q3ZCJuYWVEImInd3VLbApjK35JRk4iWj1eeWpwD04MYl16Vyx4IFF0a3sGYDsBAGcTV25rbkJzTAATU3ZhckMFTwFLVnQPPWYCdQ4eN1QrWBQCEgNWHlwSBiI3VRxrQ2wSBlQaWhUGEQBcK1olAhUHVhpcFwEVAVAaUiUFEg5lQA57BxdSVB1YQVIXVVdOCSUyIgRlK2sVASIEZVk1FwdADlwaDhcKEg9QHg4WUUIGBh9SEgAWUlIbWEILQARlGVoUBhs%253D"
-        },
-        "name": "三只松鼠大礼包",
-        "sort": 98,
-        "tabId": 3,
-        "type": 0,
-        "url": "https://u.jd.com/wg5FOR5"
-      }, {
-        "_id": {
-          "$oid": "601632c5157a0c000182ad15"
-        },
-        "bannerPic": "https://img-blog.csdnimg.cn/20210131124604470.png",
-        "icon": "https://img-blog.csdnimg.cn/20210131123847141.png",
-        "minapp": {
-          "appid": "wxd7fa7df243b05aed",
-          "path": "cx-cpc/views/index/index?trace_id=0a56473a601637b068f431b90bfa8f02&share_source_id=60052&biz_channel_id=666005&origin=&root_xpsid=951ba84b15894f4ab11ecaae334f31bf&xpsid=951ba84b15894f4ab11ecaae334f31bf&f_xpsid=951ba84b15894f4ab11ecaae334f31bf&page=invitee&share_code=bvqh43opqfrs8udvav1g00&dchn=nLAEd3"
-        },
-        "name": "橙心优选",
-        "tabId": 4,
-        "type": 0,
-        "sort": 97
-      }
+        {
+          "_id": {
+            "$oid": "601632c5157a0c000182ad15"
+          },
+          "bannerPic": "https://img-blog.csdnimg.cn/20210131124604470.png",
+          "icon": "https://img-blog.csdnimg.cn/20210131123847141.png",
+          "minapp": {
+            "appid": "wxd7fa7df243b05aed",
+            "path": "cx-cpc/views/index/index?trace_id=0a56473a601637b068f431b90bfa8f02&share_source_id=60052&biz_channel_id=666005&origin=&root_xpsid=951ba84b15894f4ab11ecaae334f31bf&xpsid=951ba84b15894f4ab11ecaae334f31bf&f_xpsid=951ba84b15894f4ab11ecaae334f31bf&page=invitee&share_code=bvqh43opqfrs8udvav1g00&dchn=nLAEd3"
+          },
+          "name": "橙心优选",
+          "tabId": 4,
+          "type": 0,
+          "sort": 97
+        }
       ]
     }
   },
