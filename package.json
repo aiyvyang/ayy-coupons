@@ -1,0 +1,30 @@
+{
+  "name": "coupons",
+  "version": "0.1.0",
+  "description": "优券了个券，分享折扣，省钱多多。",
+  "author": {
+    "name": "deary",
+    "email": "thedanyang@qq.com",
+    "url": "https://blog.csdn.net/qq_34707272"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^2.6.11",
+    "@types/uni-app": "^1.4.4",
+    "@vue/cli-plugin-eslint": "^5.0.4",
+    "babel-eslint": "^10.1.0",
+    "eslint": "8.22.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-vue": "^9.1.0"
+  },
+  "browserslist": [
+    "Android >= 4.4",
+    "ios >= 9"
+  ],
+  "engines": {
+    "node": ">=8.9",
+    "npm": ">=3.0.0"
+  },
+  "uni-app": {
+    "scripts": {}
+  }
+}
