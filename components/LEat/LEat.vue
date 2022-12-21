@@ -3,11 +3,25 @@
     <view :class="['mask',maskState===0?'none':maskState===1?'show':'']">
       <view class="mask-content">
         <view class="mask-content-topbar">
-          <view class="left" @tap="cance">取消</view>
-          <view class="right" @tap="confirm">确定</view>
+          <view
+            class="left"
+            @tap="cance"
+          >取消</view>
+          <view
+            class="right"
+            @tap="confirm"
+          >确定</view>
         </view>
         <view class="mask-content-input">
-          <textarea v-model="content" adjustPosition="true" class="textarea" cursorSpacing="50" :focus="focus" maxlength="1000" showConfirmBar="false"></textarea>
+          <textarea
+            v-model="content"
+            adjustPosition="true"
+            class="textarea"
+            cursorSpacing="50"
+            :focus="focus"
+            maxlength="1000"
+            showConfirmBar="false"
+          />
         </view>
         <view class="tips">想吃什么以空格分割输入，例如"面条 米饭 牛排"</view>
       </view>
@@ -17,7 +31,7 @@
 
 <script>
 export default {
-  name: 'LEat',
+  name: "LEat",
 
   components: {},
 
@@ -28,7 +42,7 @@ export default {
       maskState: 0,
       content: "",
       focus: false
-    }
+    };
   },
 
   computed: {},
@@ -46,7 +60,7 @@ export default {
 
   methods: {
     toggleMask(content) {
-      this.maskState = 1; //显示弹窗
+      this.maskState = 1; // 显示弹窗
       this.content = content;
       this.focus = true;
     },
@@ -54,11 +68,11 @@ export default {
       this.maskState = 0;
     },
     confirm() {
-      this.$emit('ok', this.content);
+      this.$emit("ok", this.content);
       this.cance();
     }
   }
-}
+};
 </script>
 
 <style scoped>

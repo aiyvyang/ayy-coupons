@@ -1,14 +1,17 @@
 <template>
-  <view :id="elId" class="l-tabs">
+  <view
+    :id="elId"
+    class="l-tabs"
+  >
     <scroll-view
-        :scroll-x="scroll"
-        :scroll-left="scroll ? scrollLeft : 0"
-        :scroll-with-animation="scroll"
-        :style="{ position: fixed ? 'fixed' : 'relative', zIndex: 1993 }"
+      :scroll-x="scroll"
+      :scroll-left="scroll ? scrollLeft : 0"
+      :scroll-with-animation="scroll"
+      :style="{ position: fixed ? 'fixed' : 'relative', zIndex: 1993 }"
     >
       <view
-          class="l-tabs__container"
-          :style="{
+        class="l-tabs__container"
+        :style="{
           display: scroll ? 'inline-flex' : 'flex',
           whiteSpace: scroll ? 'nowrap' : 'normal',
           background: bgColor,
@@ -16,22 +19,25 @@
         }"
       >
         <view
-            class="l-tabs__container-item"
-            v-for="(v, i) in tabs"
-            :key="i"
-            :style="{
+          v-for="(v, i) in tabs"
+          :key="i"
+          class="l-tabs__container-item"
+          :style="{
             color: current == i ? activeColor : color,
             fontSize: current == i ? fontSize : fontSize
           }"
-            @click="change(i)"
+          @click="change(i)"
         >
-          <image :src="v.icon" mode=""></image>
+          <image
+            :src="v.icon"
+            mode=""
+          />
           <view>{{ v.text }}</view>
         </view>
         <view
-            v-if="!pills"
-            class="l-tabs__container-line"
-            :style="{
+          v-if="!pills"
+          class="l-tabs__container-line"
+          :style="{
             background: lineColor,
             width: lineWidth + 'px',
             height: lineHeight,
@@ -39,27 +45,27 @@
             left: lineLeft + 'px',
             transform: `translateX(-${lineWidth / 2}px)`
           }"
-        ></view>
+        />
         <view
-            v-else
-            class="l-tabs__container-pills"
-            :style="{
+          v-else
+          class="l-tabs__container-pills"
+          :style="{
             background: pillsColor,
             borderRadius: pillsBorderRadius,
             left: pillsLeft + 'px',
             width: currentWidth + 'px',
             height
           }"
-        ></view>
+        />
       </view>
     </scroll-view>
     <view
-        class="l-tabs__placeholder"
-        :style="{
+      class="l-tabs__placeholder"
+      :style="{
         height: fixed ? height : '0',
         padding
       }"
-    ></view>
+    />
   </view>
 </template>
 
@@ -89,7 +95,7 @@
  * @event {Function(current)} change 改变标签触发
  */
 export default {
-  name: 'LTabs',
+  name: "LTabs",
 
   components: {},
 
@@ -101,32 +107,32 @@ export default {
     tabs: {
       type: Array,
       default() {
-        return []
+        return [];
       }
     },
     bgColor: {
       type: String,
-      default: '#fff'
+      default: "#fff"
     },
     padding: {
       type: String,
-      default: '0'
+      default: "0"
     },
     color: {
       type: String,
-      default: '#333'
+      default: "#333"
     },
     activeColor: {
       type: String,
-      default: '#2979ff'
+      default: "#2979ff"
     },
     fontSize: {
       type: String,
-      default: '28rpx'
+      default: "28rpx"
     },
     activeFontSize: {
       type: String,
-      default: '32rpx'
+      default: "32rpx"
     },
     bold: {
       type: Boolean,
@@ -138,15 +144,15 @@ export default {
     },
     height: {
       type: String,
-      default: '70rpx'
+      default: "70rpx"
     },
     lineColor: {
       type: String,
-      default: '#2979ff'
+      default: "#2979ff"
     },
     lineHeight: {
       type: String,
-      default: '10rpx'
+      default: "10rpx"
     },
     lineScale: {
       type: Number,
@@ -154,7 +160,7 @@ export default {
     },
     lineRadius: {
       type: String,
-      default: '10rpx'
+      default: "10rpx"
     },
     pills: {
       type: Boolean,
@@ -162,15 +168,15 @@ export default {
     },
     pillsColor: {
       type: String,
-      default: '#2979ff'
+      default: "#2979ff"
     },
     pillsBorderRadius: {
       type: String,
-      default: '10rpx'
+      default: "10rpx"
     },
     field: {
       type: String,
-      default: ''
+      default: ""
     },
     fixed: {
       type: Boolean,
@@ -178,13 +184,13 @@ export default {
     },
     paddingItem: {
       type: String,
-      default: '0 22rpx'
+      default: "0 22rpx"
     }
   },
 
   data() {
     return {
-      elId: '',
+      elId: "",
       lineWidth: 30,
       currentWidth: 0, // 当前选项的宽度
       lineLeft: 0, // 滑块距离左侧的位置
@@ -192,25 +198,25 @@ export default {
       scrollLeft: 0, // 距离左边的位置
       containerWidth: 0, // 容器的宽度
       current: 0 // 当前选中项
-    }
+    };
   },
 
   computed: {},
 
   watch: {
     value(newVal) {
-      this.current = newVal
+      this.current = newVal;
       this.$nextTick(() => {
-        this.getTabItemWidth()
-      })
+        this.getTabItemWidth();
+      });
     },
     current(newVal) {
-      this.$emit('input', newVal)
+      this.$emit("input", newVal);
     },
     tabs(newVal) {
       this.$nextTick(() => {
-        this.getTabItemWidth()
-      })
+        this.getTabItemWidth();
+      });
     }
   },
 
@@ -218,11 +224,11 @@ export default {
   },
 
   mounted() {
-    this.elId = 'yqlgq_' + this.randomString()
-    this.current = this.value
+    this.elId = "yqlgq_" + this.randomString();
+    this.current = this.value;
     this.$nextTick(() => {
-      this.getTabItemWidth()
-    })
+      this.getTabItemWidth();
+    });
   },
 
   destroyed() {
@@ -231,77 +237,77 @@ export default {
   methods: {
     // 产生随机字符串
     randomString(len) {
-      len = len || 32
-      let $chars =
-          'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678' /****默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
-      let maxPos = $chars.length
-      let pwd = ''
+      len = len || 32;
+      const $chars =
+          "ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678"; /** **默认去掉了容易混淆的字符oOLl,9gq,Vv,Uu,I1****/
+      const maxPos = $chars.length;
+      let pwd = "";
       for (let i = 0; i < len; i++) {
-        pwd += $chars.charAt(Math.floor(Math.random() * maxPos))
+        pwd += $chars.charAt(Math.floor(Math.random() * maxPos));
       }
-      return pwd
+      return pwd;
     },
     // 切换事件
     change(index) {
       if (this.current !== index) {
-        this.current = index
+        this.current = index;
 
-        this.$emit('change', index)
+        this.$emit("change", index);
       }
     },
     // 获取左移动位置
     getTabItemWidth() {
-      let query = uni
-      .createSelectorQuery()
+      const query = uni
+        .createSelectorQuery()
       // #ifndef MP-ALIPAY
-      .in(this)
+        .in(this);
       // #endif
       // 获取容器的宽度
       query
-      .select(`#${this.elId}`)
-      .boundingClientRect((data) => {
-        if (!this.containerWidth && data) {
-          this.containerWidth = data.width
-        }
-      })
-      .exec()
+        .select(`#${this.elId}`)
+        .boundingClientRect((data) => {
+          if (!this.containerWidth && data) {
+            this.containerWidth = data.width;
+          }
+        })
+        .exec();
       // 获取所有的 tab-item 的宽度
       query
-      .selectAll('.l-tabs__container-item')
-      .boundingClientRect((data) => {
-        if (!data) {
-          return
-        }
-        let lineLeft = 0
-        let currentWidth = 0
-        if (data) {
-          for (let i = 0; i < data.length; i++) {
-            if (i < this.current) {
-              lineLeft += data[i].width
-            } else if (i == this.current) {
-              currentWidth = data[i].width
-            } else {
-              break
+        .selectAll(".l-tabs__container-item")
+        .boundingClientRect((data) => {
+          if (!data) {
+            return;
+          }
+          let lineLeft = 0;
+          let currentWidth = 0;
+          if (data) {
+            for (let i = 0; i < data.length; i++) {
+              if (i < this.current) {
+                lineLeft += data[i].width;
+              } else if (i == this.current) {
+                currentWidth = data[i].width;
+              } else {
+                break;
+              }
             }
           }
-        }
-        // 当前滑块的宽度
-        this.currentWidth = currentWidth
-        // 缩放后的滑块宽度
-        this.lineWidth = currentWidth * this.lineScale * 1
-        // 滑块作移动的位置
-        this.lineLeft = lineLeft + currentWidth / 2
-        // 胶囊距离左侧的位置
-        this.pillsLeft = lineLeft
-        // 计算滚动的距离左侧的位置
-        if (this.scroll) {
-          this.scrollLeft = this.lineLeft - this.containerWidth / 2
-        }
-      })
-      .exec()
+          // 当前滑块的宽度
+          this.currentWidth = currentWidth;
+          // 缩放后的滑块宽度
+          this.lineWidth = currentWidth * this.lineScale * 1;
+          // 滑块作移动的位置
+          this.lineLeft = lineLeft + currentWidth / 2;
+          // 胶囊距离左侧的位置
+          this.pillsLeft = lineLeft;
+          // 计算滚动的距离左侧的位置
+          if (this.scroll) {
+            this.scrollLeft = this.lineLeft - this.containerWidth / 2;
+          }
+        })
+        .exec();
     }
   }
-}
+};
 </script>
 
 <style scoped>
