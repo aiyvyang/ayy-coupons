@@ -304,7 +304,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .l-tabs {
   width: 100%;
   box-sizing: border-box;
@@ -312,50 +312,45 @@ export default {
   height: 200rpx;
   display: flex;
   align-items: center;
-  background-color: #ffffff;
-  scroll-view{
-    width: 750rpx;
-  }
-  &__container {
-    min-width: 100%;
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    white-space: nowrap;
-    overflow: hidden;
-
-    &-item {
-      display: flex;
-      flex-direction:column;
-      align-items: center;
-      height: 100%;
-      position: relative;
-      z-index: 10;
-      // padding: 0 11px;
-      transition: all 0.2s;
-      white-space: nowrap;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 0 35rpx;
-      padding-bottom: 10rpx;
-      image{
-        width: 80rpx;
-        height: 80rpx;
-        display: block;
-      }
-    }
-
-    &-line {
-      position: absolute;
-      bottom: 0;
-      transition: all 0.2s linear;
-    }
-
-    &-pills {
-      position: absolute;
-      transition: all 0.2s linear;
-      z-index: 9;
-    }
-  }
+  background-color: #fff;
+}
+.l-tabs scroll-view {
+  width: 750rpx;
+}
+.l-tabs__container {
+  min-width: 100%;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.l-tabs__container-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 35rpx 10rpx;
+}
+.l-tabs__container-item image {
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+}
+.l-tabs__container-line {
+  position: absolute;
+  bottom: 0;
+  transition: all 0.2s linear;
+}
+.l-tabs__container-pills {
+  position: absolute;
+  transition: all 0.2s linear;
+  z-index: 9;
 }
 </style>

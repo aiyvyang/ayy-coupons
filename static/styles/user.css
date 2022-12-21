@@ -1,0 +1,153 @@
+page {
+  background: #f8f8f8;
+}
+
+.container {
+  padding-bottom: 20rpx;
+}
+
+.head {
+  display: flex;
+  position: relative;
+  padding: 20px 0;
+  height: 220rpx;
+  text-align: center;
+  background: #fff;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.head .avatarUrl {
+  // width: 120rpx;
+  // height: 120rpx;
+  // display: block;
+  // margin: auto;
+  // border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-pack: center;
+  position: relative;
+  margin: 0 auto 10rpx;
+  border-radius: 50%;
+  width: 150rpx;
+  height: 150rpx;
+  justify-content: center;
+}
+
+.head .nickName {
+  margin-top: 10rpx;
+  width: 100%;
+  font-size: 36rpx;
+  text-align: center;
+  color: #333;
+}
+
+.head .loginBtn {
+  text-align: center;
+}
+
+.head .loginBtn button {
+  display: inline-block;
+  border: none;
+  border-radius: 35rpx;
+  padding: 0 20rpx;
+  height: 70rpx;
+  font-size: 32rpx;
+  line-height: 70rpx;
+  background: linear-gradient(90deg, #33cc33, #33bb33);
+}
+
+.head .loginBtn button::after {
+  border: none;
+}
+
+.head .lot {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #f8f8f8;
+  padding: 30rpx;
+  width: 690rpx;
+}
+
+.head .lot > view {
+  width: 50%;
+  text-align: center;
+}
+
+.head .lot .num {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #333;
+}
+
+.head .lot .name {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.head .lot .all {
+  box-sizing: border-box;
+  border-right: 1px solid #f8f8f8;
+}
+
+.others {
+  margin: 20rpx 0;
+  background: #fff;
+}
+
+.others .item {
+  display: flex;
+  border-bottom: 1px solid #ededf0;
+  padding: 0 30rpx;
+  width: 690rpx;
+  align-items: center;
+}
+
+.others .item:last-child {
+  border-bottom: none;
+}
+
+.others .item .icon {
+  margin-right: 30rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.others .item .content {
+  display: flex;
+  padding: 30rpx 0;
+  width: 620rpx;
+  font-size: 34rpx;
+  color: #333;
+  align-items: center;
+}
+
+.others .item .content.share {
+  border: none;
+  line-height: normal;
+  text-align: left;
+  background: none;
+}
+
+.others .item .content.share::after {
+  border: none;
+}
+
+.others .item .content .right {
+  margin-left: auto;
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.version {
+  display: block;
+  position: fixed;
+  bottom: 20rpx;
+  width: 100%;
+  font-size: 28rpx;
+  text-align: center;
+  color: #666;
+}

@@ -1,5 +1,5 @@
 <template>
-  <view class="container">
+  <view class="l-eat-page">
     <view class="top">
       <!-- <view class="adContainer">
         <ad adpid="1617225366" @load="adLoad" @error="adError"></ad>
@@ -32,8 +32,6 @@
       LEat
     },
 
-    props: {},
-
     data() {
       return {
         startLabel: "开始",
@@ -49,13 +47,7 @@
       }
     },
 
-    watch: {},
-
-    created() {},
-
-    mounted() {},
-
-    destroyed() {},
+    onLoad() {},
 
     onShow() {
       this.cloudDishContent = uni.getStorageSync('meanContent') || this.defaultDishString;
@@ -70,13 +62,14 @@
         this.$refs.setMean.toggleMask(this.cloudDishContent);
       },
       start() {
-        "开始" == this.startLabel ? (this.startLabel = "停止", this.timer = setInterval(this.randEatLabel, 100)) : (this
-          .startLabel =
-          "开始",
-          clearInterval(this.timer), this.timer = null, this.eatLabel = "今天吃" + this.dish + "吧!");
+        "开始" == this.startLabel
+          ?
+            (this.startLabel = "停止", this.timer = setInterval(this.randEatLabel, 100))
+          :
+            (this.startLabel = "开始", clearInterval(this.timer), this.timer = null, this.eatLabel = "今天吃" + this.dish + "吧!");
       },
       randEatLabel() {
-        var t = this.dishs[Math.floor(Math.random() * this.dishs.length)];
+        const t = this.dishs[Math.floor(Math.random() * this.dishs.length)]
         this.eatLabel = "今天吃" + t, this.dish = t;
       },
       adLoad() {
@@ -89,71 +82,6 @@
   }
 </script>
 
-<style scoped>
-  page {
-    background-color: #f8f8f8;
-  }
-
-  .adContainer,
-  page {
-    width: 100%;
-  }
-
-  .container {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-  }
-
-  .container .top .avatar {
-    position: relative;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    overflow: hidden;
-    width: 150rpx;
-    height: 150rpx;
-    border-radius: 50%;
-    margin: 0 auto 10rpx;
-  }
-
-  .container .top .name {
-    font-size: 12px;
-  }
-
-  .container .bottom {
-    position: relative;
-    margin-top: 50rpx;
-  }
-
-  .container .bottom .eat {
-    font-size: 20px;
-  }
-
-  .container .bottom .start {
-    margin-top: 64rpx;
-  }
-
-  .container .bottom .start .but {
-    color: #fff;
-    font-size: 16px;
-    background-color: orange;
-    padding: 12rpx 38rpx;
-    border-radius: 40rpx;
-  }
-
-  .container .bottom .start .but:active {
-    background-color: #bfbfbf;
-  }
-
-  .container .bottom .custom-dish {
-    margin-top: 50rpx;
-    font-size: 10px;
-    color: grey;
-  }
-
-  .container .cu-form-group {
-    background-color: #fff;
-    font-size: 13px;
-  }
+<style>
+@import url("../../static/styles/eat.css");
 </style>

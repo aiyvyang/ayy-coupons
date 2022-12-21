@@ -1,0 +1,98 @@
+page {
+  background-color: #f8f8f8;
+}
+
+.container {
+  position: relative;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.container .tab {
+  position: fixed;
+  top: var(--window-top);
+  left: 0;
+  z-index: 9999;
+}
+
+.container .coupon {
+  padding-top: 200rpx;
+  padding-bottom: 10rpx;
+}
+
+.container .coupon .item {
+  margin: 30rpx;
+  border-radius: 10rpx;
+  padding: 0 30rpx 30rpx 30rpx;
+  background-color: #fff;
+}
+
+.container .coupon .item .top {
+  display: flex;
+  height: 116rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .coupon .item .top .left {
+  display: flex;
+  width: 400rpx;
+  height: 116rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .coupon .item .top .left .content {
+  width: 100%;
+}
+
+.container .coupon .item .top .left .icon {
+  display: inline-block;
+  width: 52rpx;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.container .coupon .item .top .left .name {
+  display: inline-block;
+  margin-left: 15rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+  text-align: left;
+  vertical-align: bottom;
+  color: #000;
+}
+
+.container .coupon .item .top .left .text {
+  border-radius: 6rpx;
+  width: 150rpx;
+  height: 38rpx;
+  font-size: 24rpx;
+  line-height: 38rpx;
+  text-align: center;
+  color: #61300e;
+  background: linear-gradient(90deg, #f9db8d, #f8d98a);
+}
+
+.container .coupon .item .top .right {
+  border-radius: 30rpx;
+  width: 170rpx;
+  height: 60rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(90deg, #ec6f43, #ea4a36);
+}
+
+.container .coupon .item .bottom {
+  width: 100%;
+  height: auto;
+}
+
+.container .coupon .item .bottom image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
