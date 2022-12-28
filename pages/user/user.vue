@@ -15,7 +15,7 @@
       <view class="item">
         <image
           class="icon"
-          src="/static/user_share.png"
+          src="/static/images/user_share.png"
         />
         <button
           class="content share"
@@ -24,15 +24,15 @@
           <view>分享好友</view>
           <image
             class="right"
-            src="/static/right_h.png"
+            src="/static/images/right_h.png"
           />
         </button>
       </view>
       <!--<view class="item">-->
-      <!--  <image class="icon" src="/static/user_hezuo.png"></image>-->
+      <!--  <image class="icon" src="/static/tabbar/user_fill.png"></image>-->
       <!--  <button class="content share" @tap="chouqian">-->
       <!--    <view>抽签小程序</view>-->
-      <!--    <image class="right" src="/static/right_h.png"></image>-->
+      <!--    <image class="right" src="/static/images/right_h.png"></image>-->
       <!--  </button>-->
       <!--</view>-->
     </view>
