@@ -2,7 +2,7 @@
   <view class="container">
     <l-tabs
       v-model="current"
-      :tabs="coupons"
+      :tabs="lists"
       class="tab"
       @change="changeTab"
     />
@@ -61,7 +61,7 @@ export default {
     return {
       current: 0,
       couponList: [],
-      coupons: []
+      lists: []
     };
   },
 
@@ -90,12 +90,12 @@ export default {
   },
 
   methods: {
-    changeTab(index) {
+    changeTab(i) {
       this.couponList = [];
       uni.showLoading({
         title: "获取优惠中"
       });
-      this.couponList = this.coupons[index].coupons || [];
+      this.couponList = this.lists[i] && this.lists[i].coupons || [];
 
       // #ifdef H5
       this.$nextTick(() => {
@@ -126,7 +126,7 @@ export default {
     },
     getCoupons() {
       const setData = (data) => {
-        this.coupons = data;
+        this.lists = data;
         this.changeTab(0);
       };
       const env = process.env.NODE_ENV;
