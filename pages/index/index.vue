@@ -2,7 +2,7 @@
   <view class="container">
     <l-tabs
       v-model="current"
-      :tabs="tabs"
+      :tabs="coupons"
       class="tab"
       @change="changeTab"
     />
@@ -50,6 +50,7 @@
 
 <script>
 import LTabs from "../../components/LTabs/LTabs.vue";
+const result = require("../../api/coupons.json");
 
 export default {
   name: "Index",
@@ -59,7 +60,6 @@ export default {
   data() {
     return {
       current: 0,
-      tabs: [],
       couponList: [],
       coupons: []
     };
@@ -68,18 +68,14 @@ export default {
   onLoad(e) {
     this.getCoupons();
 
-    let tabId;
+    let idx;
     // #ifdef H5
-    tabId = this.$route.query.tabId ? parseInt(this.$route.query.tabId) : 0;
+    idx = this.$route.query.idx ? parseInt(this.$route.query.idx) : 0;
     // #endif
     // #ifdef MP-WEIXIN
-    tabId = e.tabId ? parseInt(e.tabId) : 0;
+    idx = e.idx ? parseInt(e.idx) : 0;
     // #endif
-    for (const i in this.tabs) {
-      if (tabId == this.tabs[i].tabId) {
-        this.current = parseInt(i);
-      }
-    }
+    this.current = parseInt(idx);
     this.changeTab(this.current);
   },
 
@@ -99,15 +95,8 @@ export default {
       uni.showLoading({
         title: "获取优惠中"
       });
-      if (index == 0) {
-        this.couponList = this.coupons;
-      } else {
-        for (const i in this.coupons) {
-          if (this.coupons[i].tabId == this.tabs[index].tabId) {
-            this.couponList.push(this.coupons[i]);
-          }
-        }
-      }
+      this.couponList = this.coupons[index].coupons || [];
+
       // #ifdef H5
       this.$nextTick(() => {
         this.$refs.coupon.scrollTop = 0;
@@ -115,7 +104,7 @@ export default {
       // #endif
       setTimeout(() => {
         uni.hideLoading();
-      }, 500);
+      }, 200);
     },
     toCoupon(i) {
       const currentOffer = this.couponList[i];
@@ -136,18 +125,25 @@ export default {
       // #endif
     },
     getCoupons() {
-      uni.request({
-        // eslint-disable-next-line no-undef
-        url: getApp().globalData.api.coupons,
-        success: (res) => {
-          const { statusCode, data } = res;
-          if (statusCode === 200) {
-            this.tabs = data.tabs;
-            this.coupons = data.coupons;
-            this.changeTab(0);
+      const setData = (data) => {
+        this.coupons = data;
+        this.changeTab(0);
+      };
+      const env = process.env.NODE_ENV;
+      if (env === "development") {
+        setData(result.lists);
+      } else if (env === "production") {
+        uni.request({
+          // eslint-disable-next-line no-undef
+          url: getApp().globalData.api.coupons,
+          success: (res) => {
+            const { statusCode, data } = res;
+            if (statusCode === 200) {
+              setData(data.lists);
+            }
           }
-        }
-      });
+        });
+      }
     }
   }
 };

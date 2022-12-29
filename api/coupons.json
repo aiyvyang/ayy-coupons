@@ -1,82 +1,72 @@
 {
-  "tabs": [
-    {
-      "icon": "https://unpkg.com/resource-deary@1.0.0/cps/all.png",
-      "tabId": 0,
-      "text": "全部"
-    },
+  "lists": [
     {
       "icon": "https://unpkg.com/resource-deary@1.0.0/cps/meituan.png",
-      "tabId": 2,
-      "text": "美团"
+      "text": "美团",
+      "coupons": [
+        {
+          "bannerPic": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/meituan_banner.png",
+          "icon": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/meituan.png",
+          "minapp": {
+            "appid": "wx2c348cf579062e56",
+            "path": "outer_packages/r2xinvite/coupon/coupon?inviteCode=NnOIp-QOs8SiYF1dcSlL5r8phPrCf6qkH7evMyjIoup2NXxNCLYcBbd3bqpv2X2Ih2QG-YrNOqO284kcln6BCYfckBu6cqLQD0VXZQF63FEn3rMY-PBvvf0D-SJXXThXvKf5O9N_120IcigRbQcEoVdYLkp82LGcg78wAMUTp60"
+          },
+          "name": "美团外卖红包",
+          "type": 1,
+          "url": "https://s.click.ele.me/kJqTROu"
+        }
+      ]
     },
     {
       "icon": "https://unpkg.com/resource-deary@1.0.0/cps/jd.png",
-      "tabId": 3,
-      "text": "京东"
+      "text": "京东",
+      "coupons": [
+        {
+          "bannerPic": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/sanzhisongshu.png",
+          "icon": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/jd.png",
+          "minapp": {
+            "appid": "wx91d27dbf599dff74",
+            "path": "pages/union/proxy/proxy?spreadUrl=https%3a%2f%2funion-click.jd.com%2fjdc%3fe%3d%26p%3dAyIGZRhZFAIRAF0SXxMyEgZUGloTChEFUxlfJUZNXwtEa0xHV0YXEEULWUpYA0wPSh1JUkpJBUkcSkIBR0RMR05aW1kBUQ4SBlQaWhMKEQVTGV8CQh5zLGs%252BYnF1RiNiI3V2W2wWYy5ye3BdNRk7XQprZQ9nH2FnamE3Uh1edVoOPH8oYQBlX1x7OUxhV2Q3ZCJuYWVEImInd3VLbApjK35JRk4iWj1eeWpwD04MYl16Vyx4IFF0a3sGYDsBAGcTV25rbkJzTAATU3ZhckMFTwFLVnQPPWYCdQ4eN1QrWBQCEgNWHlwSBiI3VRxrQ2wSBlQaWhUGEQBcK1olAhUHVhpcFwEVAVAaUiUFEg5lQA57BxdSVB1YQVIXVVdOCSUyIgRlK2sVASIEZVk1FwdADlwaDhcKEg9QHg4WUUIGBh9SEgAWUlIbWEILQARlGVoUBhs%253D"
+          },
+          "name": "过幸福年还得京东超市",
+          "type": 0,
+          "url": "https://u.jd.com/od4S66v"
+        }
+      ]
     },
     {
       "icon": "https://unpkg.com/resource-deary@1.0.0/cps/ele.png",
-      "tabId": 1,
-      "text": "饿了么"
+      "text": "饿了么",
+      "coupons": [
+        {
+          "bannerPic": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/ele_banner.png",
+          "icon": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/ele.png",
+          "minapp": {
+            "appid": "wxece3a9a4c82f58c9",
+            "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/kJqTROu"
+          },
+          "name": "饿了么红包",
+          "type": 1,
+          "url": "https://s.click.ele.me/kJqTROu"
+        }
+      ]
     },
     {
       "icon": "https://img-blog.csdnimg.cn/20210131123847141.png",
       "text": "橙心优选",
-      "tabId": 4
-    }
-  ],
-  "coupons": [
-    {
-      "bannerPic": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/meituan_banner.png",
-      "icon": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/meituan.png",
-      "minapp": {
-        "appid": "wx2c348cf579062e56",
-        "path": "outer_packages/r2xinvite/coupon/coupon?inviteCode=NnOIp-QOs8SiYF1dcSlL5r8phPrCf6qkH7evMyjIoup2NXxNCLYcBbd3bqpv2X2Ih2QG-YrNOqO284kcln6BCYfckBu6cqLQD0VXZQF63FEn3rMY-PBvvf0D-SJXXThXvKf5O9N_120IcigRbQcEoVdYLkp82LGcg78wAMUTp60"
-      },
-      "name": "美团外卖红包",
-      "sort": 99,
-      "tabId": 2,
-      "type": 1,
-      "url": "https://s.click.ele.me/kJqTROu"
-    },
-    {
-      "bannerPic": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/ele_banner.png",
-      "icon": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/ele.png",
-      "minapp": {
-        "appid": "wxece3a9a4c82f58c9",
-        "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/kJqTROu"
-      },
-      "name": "饿了么红包",
-      "sort": 100,
-      "tabId": 1,
-      "type": 1,
-      "url": "https://s.click.ele.me/kJqTROu"
-    },
-    {
-      "bannerPic": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/sanzhisongshu.png",
-      "icon": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/jd.png",
-      "minapp": {
-        "appid": "wx91d27dbf599dff74",
-        "path": "pages/union/proxy/proxy?spreadUrl=https%3a%2f%2funion-click.jd.com%2fjdc%3fe%3d%26p%3dAyIGZRhZFAIRAF0SXxMyEgZUGloTChEFUxlfJUZNXwtEa0xHV0YXEEULWUpYA0wPSh1JUkpJBUkcSkIBR0RMR05aW1kBUQ4SBlQaWhMKEQVTGV8CQh5zLGs%252BYnF1RiNiI3V2W2wWYy5ye3BdNRk7XQprZQ9nH2FnamE3Uh1edVoOPH8oYQBlX1x7OUxhV2Q3ZCJuYWVEImInd3VLbApjK35JRk4iWj1eeWpwD04MYl16Vyx4IFF0a3sGYDsBAGcTV25rbkJzTAATU3ZhckMFTwFLVnQPPWYCdQ4eN1QrWBQCEgNWHlwSBiI3VRxrQ2wSBlQaWhUGEQBcK1olAhUHVhpcFwEVAVAaUiUFEg5lQA57BxdSVB1YQVIXVVdOCSUyIgRlK2sVASIEZVk1FwdADlwaDhcKEg9QHg4WUUIGBh9SEgAWUlIbWEILQARlGVoUBhs%253D"
-      },
-      "name": "过幸福年还得京东超市",
-      "sort": 98,
-      "tabId": 3,
-      "type": 0,
-      "url": "https://u.jd.com/od4S66v"
-    },
-    {
-      "bannerPic": "https://img-blog.csdnimg.cn/20210131124604470.png",
-      "icon": "https://img-blog.csdnimg.cn/20210131123847141.png",
-      "minapp": {
-        "appid": "wxd7fa7df243b05aed",
-        "path": "cx-cpc/views/index/index?trace_id=0a56473a601637b068f431b90bfa8f02&share_source_id=60052&biz_channel_id=666005&origin=&root_xpsid=951ba84b15894f4ab11ecaae334f31bf&xpsid=951ba84b15894f4ab11ecaae334f31bf&f_xpsid=951ba84b15894f4ab11ecaae334f31bf&page=invitee&share_code=bvqh43opqfrs8udvav1g00&dchn=nLAEd3"
-      },
-      "name": "橙心优选",
-      "tabId": 4,
-      "type": 0,
-      "sort": 97
+      "coupons": [
+
+        {
+          "bannerPic": "https://img-blog.csdnimg.cn/20210131124604470.png",
+          "icon": "https://img-blog.csdnimg.cn/20210131123847141.png",
+          "minapp": {
+            "appid": "wxd7fa7df243b05aed",
+            "path": "cx-cpc/views/index/index?trace_id=0a56473a601637b068f431b90bfa8f02&share_source_id=60052&biz_channel_id=666005&origin=&root_xpsid=951ba84b15894f4ab11ecaae334f31bf&xpsid=951ba84b15894f4ab11ecaae334f31bf&f_xpsid=951ba84b15894f4ab11ecaae334f31bf&page=invitee&share_code=bvqh43opqfrs8udvav1g00&dchn=nLAEd3"
+          },
+          "name": "橙心优选",
+          "type": 0
+        }
+      ]
     }
   ]
 }
