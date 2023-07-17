@@ -140,6 +140,9 @@ export default {
         uni.request({
           // eslint-disable-next-line no-undef
           url: getApp().globalData.api.coupons,
+          data: {
+            _t: Date.now()
+          },
           success: (res) => {
             const { statusCode, data } = res;
             if (statusCode === 200) {

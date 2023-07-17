@@ -11,7 +11,7 @@ export default {
   },
   globalData: {
     api: {
-      coupons: "https://word.5277.ltd/coupons/api/coupons.json"
+      coupons: "https://mp-feb5dcf3-604b-4776-81ab-606891e4f255.cdn.bspapp.com/coupons/coupons.json"
     }
   },
   methods: {
