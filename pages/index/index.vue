@@ -50,10 +50,15 @@
 
 <script>
 import LTabs from "../../components/LTabs/LTabs.vue";
-const result = require("../../api/coupons.json");
+// 运行环境
+const env = process.env.NODE_ENV;
+let result = [];
+if (env === "development") {
+  result = require("../../api/coupons.json");
+}
 
 export default {
-  name: "Index",
+  name: "PagesIndex",
 
   components: { LTabs },
 
@@ -129,7 +134,6 @@ export default {
         this.lists = data;
         this.changeTab(0);
       };
-      const env = process.env.NODE_ENV;
       if (env === "development") {
         setData(result.lists);
       } else if (env === "production") {

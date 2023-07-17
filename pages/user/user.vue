@@ -2,13 +2,13 @@
   <view class="container">
     <view class="head">
       <view class="avatarUrl">
-        <open-data type="userAvatarUrl" />
+        <image
+          class="avatar"
+          src="/static/images/logo.png"
+        />
       </view>
       <view class="nickName">
-        <open-data
-          lang="zh_CN"
-          type="userNickName"
-        />
+        优了个惠呦
       </view>
     </view>
     <view class="others">
@@ -37,7 +37,7 @@
       <!--</view>-->
     </view>
     <view class="version">
-      v1.0.0
+      v1.1.0
     </view>
   </view>
 </template>

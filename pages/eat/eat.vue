@@ -1,19 +1,20 @@
 <template>
   <view class="l-eat-page">
     <view class="top">
-      <!-- <view class="adContainer">
-        <ad adpid="1617225366" @load="adLoad" @error="adError"></ad>
-      </view> -->
+      <view class="adContainer">
+        <ad
+          adpid="1991468322"
+          @load="adLoad"
+          @error="adError"
+        />
+      </view>
       <view
         class="avatar"
         style="margin-top: 200px;"
       >
-        <open-data type="userAvatarUrl" />
-      </view>
-      <view class="name">
-        <open-data
-          lang="zh_CN"
-          type="userNickName"
+        <image
+          class="avatar"
+          src="/static/images/logo.png"
         />
       </view>
     </view>
@@ -41,7 +42,7 @@
 import LEat from "../../components/LEat/LEat.vue";
 
 export default {
-  name: "Eat",
+  name: "PagesEat",
 
   components: {
     LEat

@@ -1,12 +1,12 @@
 {
   "lists": [
     {
-      "icon": "https://unpkg.com/resource-deary@1.0.0/cps/meituan.png",
+      "icon": "https://unpkg.com/ayy-resources@1.0.0/cps/meituan.png",
       "text": "美团",
       "coupons": [
         {
-          "bannerPic": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/meituan_banner.png",
-          "icon": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/meituan.png",
+          "bannerPic": "https://unpkg.com/ayy-resources@1.0.0/cps/coupon/meituan_banner.png",
+          "icon": "https://unpkg.com/ayy-resources@1.0.0/cps/coupon/meituan.png",
           "minapp": {
             "appid": "wx2c348cf579062e56",
             "path": "outer_packages/r2xinvite/coupon/coupon?inviteCode=NnOIp-QOs8SiYF1dcSlL5r8phPrCf6qkH7evMyjIoup2NXxNCLYcBbd3bqpv2X2Ih2QG-YrNOqO284kcln6BCYfckBu6cqLQD0VXZQF63FEn3rMY-PBvvf0D-SJXXThXvKf5O9N_120IcigRbQcEoVdYLkp82LGcg78wAMUTp60"
@@ -18,12 +18,12 @@
       ]
     },
     {
-      "icon": "https://unpkg.com/resource-deary@1.0.0/cps/jd.png",
+      "icon": "https://unpkg.com/ayy-resources@1.0.0/cps/jd.png",
       "text": "京东",
       "coupons": [
         {
-          "bannerPic": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/sanzhisongshu.png",
-          "icon": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/jd.png",
+          "bannerPic": "https://unpkg.com/ayy-resources@1.0.0/cps/coupon/sanzhisongshu.png",
+          "icon": "https://unpkg.com/ayy-resources@1.0.0/cps/coupon/jd.png",
           "minapp": {
             "appid": "wx91d27dbf599dff74",
             "path": "pages/union/proxy/proxy?spreadUrl=https%3a%2f%2funion-click.jd.com%2fjdc%3fe%3d%26p%3dAyIGZRhZFAIRAF0SXxMyEgZUGloTChEFUxlfJUZNXwtEa0xHV0YXEEULWUpYA0wPSh1JUkpJBUkcSkIBR0RMR05aW1kBUQ4SBlQaWhMKEQVTGV8CQh5zLGs%252BYnF1RiNiI3V2W2wWYy5ye3BdNRk7XQprZQ9nH2FnamE3Uh1edVoOPH8oYQBlX1x7OUxhV2Q3ZCJuYWVEImInd3VLbApjK35JRk4iWj1eeWpwD04MYl16Vyx4IFF0a3sGYDsBAGcTV25rbkJzTAATU3ZhckMFTwFLVnQPPWYCdQ4eN1QrWBQCEgNWHlwSBiI3VRxrQ2wSBlQaWhUGEQBcK1olAhUHVhpcFwEVAVAaUiUFEg5lQA57BxdSVB1YQVIXVVdOCSUyIgRlK2sVASIEZVk1FwdADlwaDhcKEg9QHg4WUUIGBh9SEgAWUlIbWEILQARlGVoUBhs%253D"
@@ -35,12 +35,12 @@
       ]
     },
     {
-      "icon": "https://unpkg.com/resource-deary@1.0.0/cps/ele.png",
+      "icon": "https://unpkg.com/ayy-resources@1.0.0/cps/ele.png",
       "text": "饿了么",
       "coupons": [
         {
-          "bannerPic": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/ele_banner.png",
-          "icon": "https://unpkg.com/resource-deary@1.0.0/cps/coupon/ele.png",
+          "bannerPic": "https://unpkg.com/ayy-resources@1.0.0/cps/coupon/ele_banner.png",
+          "icon": "https://unpkg.com/ayy-resources@1.0.0/cps/coupon/ele.png",
           "minapp": {
             "appid": "wxece3a9a4c82f58c9",
             "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/kJqTROu"

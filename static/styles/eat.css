@@ -25,10 +25,6 @@ page {
   justify-content: center;
 }
 
-.l-eat-page .top .name {
-  font-size: 12px;
-}
-
 .l-eat-page .bottom {
   position: relative;
   margin-top: 50rpx;
